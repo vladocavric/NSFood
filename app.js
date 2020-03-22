@@ -8,6 +8,10 @@ app.get('/', function (req, res) {
     res.render('home')
 });
 
+app.get('*', function (req, res) {
+    res.send('404');
+});
+
 //===================================================================================
 app.listen(process.env.NSFOODPORT, err => {
     if(err){
