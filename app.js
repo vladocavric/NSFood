@@ -5,7 +5,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('themes'));
 //===================================================================================
 app.get('/', function (req, res) {
-    res.render('home')
+    res.send('something about home page')
 });
 
 //===================================================================================
