@@ -1,10 +1,15 @@
 const express = require('express');
 const app = express();
-
+//===================================================================================
+app.set('view engine', 'ejs');
+app.use(express.static('themes'));
+//===================================================================================
 app.get('/', function (req, res) {
-    res.send('this is home page for NS Food app')
+    res.render('home')
 });
-app.listen(5000, err => {
+
+//===================================================================================
+app.listen(process.env.PORT, err => {
     if(err){
         console.log(err)
     } else {
